@@ -7,7 +7,7 @@ void main() {
   runApp(
     const MaterialApp(
         // home is default route of this app (displayed first when app started)
-        // scaffold is a material design ancestor for fixed app layout using MaterialApp widget
+        // scaffold is a material design ancestor for fixing app layout using MaterialApp widget
         home: Home()),
   );
 }
