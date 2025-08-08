@@ -13,6 +13,7 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
   int sugars = 1;
 
   void increaseStrength() {
+    // set state, trigger the build for rebuilding UI
     setState(() {
       strength = strength < 5 ? strength + 1 : 1;
     });
@@ -20,7 +21,7 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
 
   void increaseSugar() {
     setState(() {
-      sugars = sugars < 5 ? sugars + 1 : 1;
+      sugars = sugars < 5 ? sugars + 1 : 0;
     });
   }
 
@@ -30,14 +31,15 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
       children: [
         Row(
           children: [
-            const Text('Strength: '),
-            Text('$strength'),
-            Image.asset(
-              'assets/img/coffee_bean.png',
-              width: 25,
-              color: Colors.brown[100],
-              colorBlendMode: BlendMode.multiply,
-            ),
+            const Text('Strength of Coffee: '),
+            // Text('$strength'),
+            for (int i = 0; i < strength; i++)
+              Image.asset(
+                'assets/img/coffee_bean.png',
+                width: 25,
+                color: Colors.brown[100],
+                colorBlendMode: BlendMode.multiply,
+              ),
             const Expanded(child: SizedBox()),
             FilledButton(
                 style: FilledButton.styleFrom(
@@ -49,14 +51,16 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
         ),
         Row(
           children: [
-            const Text('Sugars: '),
-            Text('$sugars'),
-            Image.asset(
-              'assets/img/sugar_cube.png',
-              width: 25,
-              color: Colors.brown[100],
-              colorBlendMode: BlendMode.multiply,
-            ),
+            const Text('Sugars Count: '),
+            // Text('$sugars'),
+            if (sugars == 0) const Text('No sugars...'),
+            for (int i = 0; i < sugars; i++)
+              Image.asset(
+                'assets/img/sugar_cube.png',
+                width: 25,
+                color: Colors.brown[100],
+                colorBlendMode: BlendMode.multiply,
+              ),
             const Expanded(child: SizedBox()),
             TextButton(
                 style: TextButton.styleFrom(foregroundColor: Colors.brown),
