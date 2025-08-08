@@ -1,16 +1,7 @@
-# diceapp
+# My Coffee Card App with Flutter
 
 A new Flutter project.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Screenshot
+<img width="456" height="911" alt="Screen Shot 2025-08-08 at 11 22 33 PM" src="https://github.com/user-attachments/assets/9e3cbdce-dbe0-41dc-a298-46c13ed22cb9" />
+<img width="456" height="899" alt="Screen Shot 2025-08-08 at 11 23 01 PM" src="https://github.com/user-attachments/assets/c3aa8444-d0ce-4a42-bf26-613796ee33ed" />
