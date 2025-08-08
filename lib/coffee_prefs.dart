@@ -1,3 +1,5 @@
+import 'package:diceapp/style/styled_body_text.dart';
+import 'package:diceapp/style/styled_button.dart';
 import 'package:flutter/material.dart';
 
 class CoffeePrefs extends StatefulWidget {
@@ -31,7 +33,7 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
       children: [
         Row(
           children: [
-            const Text('Strength of Coffee: '),
+            const StyledBodyText('Strength  '),
             // Text('$strength'),
             for (int i = 0; i < strength; i++)
               Image.asset(
@@ -41,17 +43,12 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
                 colorBlendMode: BlendMode.multiply,
               ),
             const Expanded(child: SizedBox()),
-            FilledButton(
-                style: FilledButton.styleFrom(
-                    backgroundColor: Colors.brown,
-                    foregroundColor: Colors.white),
-                onPressed: increaseStrength,
-                child: const Text('+'))
+            StyledButton(onPressed: increaseStrength, child: const Text('+'))
           ],
         ),
         Row(
           children: [
-            const Text('Sugars Count: '),
+            const StyledBodyText('Sugars  '),
             // Text('$sugars'),
             if (sugars == 0) const Text('No sugars...'),
             for (int i = 0; i < sugars; i++)
@@ -62,10 +59,7 @@ class _CoffeePrefsState extends State<CoffeePrefs> {
                 colorBlendMode: BlendMode.multiply,
               ),
             const Expanded(child: SizedBox()),
-            TextButton(
-                style: TextButton.styleFrom(foregroundColor: Colors.brown),
-                onPressed: increaseSugar,
-                child: const Text('+'))
+            StyledButton(onPressed: increaseSugar, child: const Text('+'))
           ],
         )
       ],

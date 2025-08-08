@@ -1,4 +1,5 @@
 import 'package:diceapp/coffee_prefs.dart';
+import 'package:diceapp/style/styled_body_text.dart';
 import 'package:flutter/material.dart';
 
 // widget not contain any state event
@@ -25,7 +26,7 @@ class Home extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(20),
             color: Colors.brown[200],
-            child: const Text('How I like my coffee'),
+            child: StyledBodyText('How i like my coffee'),
           ),
           Container(
             padding: const EdgeInsets.all(20),
